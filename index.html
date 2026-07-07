@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Bello Luxury Jewelries</title>
+
+
+
+  <style>
+
+    *{
+
+      margin:0;
+
+      padding:0;
+
+      box-sizing:border-box;
+
+      font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+
+
+    body{
+
+      background:#f9f7f3;
+
+      color:#222;
+
+      line-height:1.6;
+
+    }
+
+
+
+    header{
+
+      background:linear-gradient(to right, #111, #3a2d0f);
+
+      color:white;
+
+      padding:20px 60px;
+
+      display:flex;
+
+      justify-content:space-between;
+
+      align-items:center;
+
+    }
+
+
+
+    header h1{
+
+      font-size:32px;
+
+      letter-spacing:2px;
+
+      color:gold;
+
+    }
+
+
+
+    nav a{
+
+      color:white;
+
+      text-decoration:none;
+
+      margin-left:25px;
+
+      font-weight:bold;
+
+      transition:0.3s;
+
+    }
+
+
+
+    nav a:hover{
+
+      color:gold;
+
+    }
+
+
+
+    .hero{
+
+      height:90vh;
+
+      background:url('https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+
+      display:flex;
+
+      justify-content:center;
+
+      align-items:center;
+
+      text-align:center;
+
+      color:white;
+
+      padding:20px;
+
+    }
+
+
+
+    .hero-content{
+
+      background:rgba(0,0,0,0.6);
+
+      padding:40px;
+
+      border-radius:10px;
+
+    }
+
+
+
+    .hero h2{
+
+      font-size:55px;
+
+      margin-bottom:20px;
+
+      color:gold;
+
+    }
+
+
+
+    .hero p{
+
+      font-size:20px;
+
+      margin-bottom:25px;
+
+    }
+
+
+
+    .btn{
+
+      background:gold;
+
+      color:black;
+
+      padding:14px 30px;
+
+      text-decoration:none;
+
+      font-weight:bold;
+
+      border-radius:5px;
+
+      transition:0.3s;
+
+    }
+
+
+
+    .btn:hover{
+
+      background:white;
+
+    }
+
+
+
+    section{
+
+      padding:70px 60px;
+
+    }
+
+
+
+    .section-title{
+
+      text-align:center;
+
+      font-size:40px;
+
+      margin-bottom:40px;
+
+      color:#8b6b08;
+
+    }
+
+
+
+    .about{
+
+      display:flex;
+
+      gap:40px;
+
+      align-items:center;
+
+      flex-wrap:wrap;
+
+    }
+
+
+
+    .about img{
+
+      width:500px;
+
+      border-radius:10px;
+
+    }
+
+
+
+    .about-text{
+
+      flex:1;
+
+    }
+
+
+
+    .about-text h3{
+
+      font-size:32px;
+
+      margin-bottom:20px;
+
+    }
+
+
+
+    .products{
+
+      display:grid;
+
+      grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+
+      gap:30px;
+
+    }
+
+
+
+    .product-card{
+
+      background:white;
+
+      border-radius:10px;
+
+      overflow:hidden;
+
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+
+      transition:0.3s;
+
+    }
+
+
+
+    .product-card:hover{
+
+      transform:translateY(-10px);
+
+    }
+
+
+
+    .product-card img{
+
+      width:100%;
+
+      height:250px;
+
+      object-fit:cover;
+
+    }
+
+
+
+    .product-info{
+
+      padding:20px;
+
+      text-align:center;
+
+    }
+
+
+
+    .product-info h4{
+
+      margin-bottom:10px;
+
+      font-size:24px;
+
+    }
+
+
+
+    .product-info p{
+
+      color:#777;
+
+      margin-bottom:15px;
+
+    }
+
+
+
+    .price{
+
+      color:goldenrod;
+
+      font-size:22px;
+
+      font-weight:bold;
+
+    }
+
+
+
+    .countries{
+
+      background:#111;
+
+      color:white;
+
+      text-align:center;
+
+    }
+
+
+
+    .countries h3{
+
+      font-size:35px;
+
+      margin-bottom:20px;
+
+      color:gold;
+
+    }
+
+
+
+    .country-list{
+
+      display:flex;
+
+      justify-content:center;
+
+      gap:40px;
+
+      flex-wrap:wrap;
+
+      margin-top:30px;
+
+    }
+
+
+
+    .country{
+
+      background:#222;
+
+      padding:20px 40px;
+
+      border-radius:10px;
+
+      font-size:22px;
+
+      font-weight:bold;
+
+    }
+
+
+
+    footer{
+
+      background:#000;
+
+      color:white;
+
+      text-align:center;
+
+      padding:30px;
+
+    }
+
+
+
+    @media(max-width:768px){
+
+
+
+      header{
+
+        flex-direction:column;
+
+        text-align:center;
+
+      }
+
+
+
+      nav{
+
+        margin-top:15px;
+
+      }
+
+
+
+      .hero h2{
+
+        font-size:40px;
+
+      }
+
+
+
+      .about{
+
+        flex-direction:column;
+
+      }
+
+
+
+      .about img{
+
+        width:100%;
+
+      }
+
+
+
+      section{
+
+        padding:50px 20px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+
+<body>
+
+
+
+  <header>
+
+    <h1>BELLO JEWELRIES</h1>
+
+
+
+    <nav>
+
+      <a href="#">Home</a>
+
+      <a href="#about">About</a>
+
+      <a href="#products">Collections</a>
+
+      <a href="#contact">Contact</a>
+
+    </nav>
+
+  </header>
+
+
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h2>Luxury Jewelries For Royalty</h2>
+
+      <p>
+
+        Exclusive collections imported from UAE, France, and Spain.
+
+      </p>
+
+
+
+      <a href="#products" class="btn">Explore Collection</a>
+
+    </div>
+
+  </section>
+
+
+
+  <section id="about">
+
+    <h2 class="section-title">About Bello Jewelries</h2>
+
+
+
+    <div class="about">
+
+      <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=1000&q=80" alt="Luxury Jewelry">
+
+
+
+      <div class="about-text">
+
+        <h3>Elegance Beyond Beauty</h3>
+
+
+
+        <p>
+
+          Bello Jewelries is a premium commercial jewelry brand offering
+
+          luxurious rings, necklaces, bracelets, watches, and accessories
+
+          sourced directly from the UAE, France, and Spain.
+
+        </p>
+
+
+
+        <br>
+
+
+
+        <p>
+
+          We specialize in high-end fashion jewelries crafted with elegance,
+
+          class, and timeless beauty for modern men and women.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <section id="products">
+
+    <h2 class="section-title">Featured Collections</h2>
+
+
+
+    <div class="products">
+
+
+
+      <div class="product-card">
+
+        <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80" alt="Gold Necklace">
+
+
+
+        <div class="product-info">
+
+          <h4>Royal Gold Necklace</h4>
+
+          <p>Imported from Dubai, UAE</p>
+
+          <div class="price">$450</div>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="product-card">
+
+        <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=800&q=80" alt="Diamond Ring">
+
+
+
+        <div class="product-info">
+
+          <h4>Diamond Engagement Ring</h4>
+
+          <p>Luxury design from France</p>
+
+          <div class="price">$700</div>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="product-card">
+
+        <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=800&q=80" alt="Luxury Watch">
+
+
+
+        <div class="product-info">
+
+          <h4>Luxury Gold Watch</h4>
+
+          <p>Exclusive Spanish collection</p>
+
+          <div class="price">$950</div>
+
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+  </section>
+
+
+
+  <section class="countries">
+
+    <h3>Imported Luxury Collections</h3>
+
+
+
+    <div class="country-list">
+
+      <div class="country">UAE</div>
+
+      <div class="country">France</div>
+
+      <div class="country">Spain</div>
+
+    </div>
+
+  </section>
+
+
+
+  <section id="contact">
+
+    <h2 class="section-title">Contact Bello Jewelries</h2>
+
+
+
+    <div style="text-align:center; font-size:20px;">
+
+      <p><strong>Email:</strong> bellojewelries@gmail.com</p>
+
+      <p><strong>Phone:</strong> +234 800 000 0000</p>
+
+      <p><strong>Location:</strong> Lagos, Nigeria</p>
+
+    </div>
+
+  </section>
+
+
+
+  <footer>
+
+    <p>
+
+      © 2025 Bello Luxury Jewelries. All Rights Reserved.
+
+    </p>
+
+  </footer>
+
+
+
+</body>
+
+</html>
